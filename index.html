@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Silva - Data Science Portfolio</title>
+    <title>Luis Silva - Personal Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,96 +13,103 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
+            background: #080808;
             min-height: 100vh;
-            color: #e8e8e8;
+            color: #ccc;
         }
 
         header {
             padding: 50px 20px 30px;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 300;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         header p {
-            font-size: 1rem;
-            color: #777;
+            font-size: 0.9rem;
+            color: #555;
         }
 
         main {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 20px;
         }
 
+        .notice {
+            color: #555;
+            font-size: 0.75rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
         .section-title {
-            font-size: 1.1rem;
+            font-size: 0.85rem;
             font-weight: 400;
-            color: #999;
+            color: #666;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
-        .projects-list {
+        .project {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
-        .project-card {
-            background: #141414;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: background 0.2s ease;
-            max-width: 320px;
-        }
-
-        .project-card:hover {
-            background: #1a1a1a;
-        }
-
-        .project-card a {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .project-image {
-            width: 120px;
-            height: auto;
-            border-radius: 6px;
+        .project-thumb {
             flex-shrink: 0;
         }
 
-        .project-info h3 {
-            font-size: 0.95rem;
+        .project-thumb a {
+            display: block;
+        }
+
+        .project-thumb img {
+            width: 140px;
+            height: auto;
+            border-radius: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .project-thumb img:hover {
+            opacity: 0.8;
+        }
+
+        .project-content h3 {
+            font-size: 1.1rem;
             font-weight: 500;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
+        }
+
+        .project-content h3 a {
             color: #fff;
+            text-decoration: none;
         }
 
-        .project-info p {
+        .project-content h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .project-content p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .project-status {
             font-size: 0.75rem;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        .notice {
-            color: #666;
-            font-size: 0.8rem;
-            margin-bottom: 25px;
-            font-style: italic;
+            color: #555;
+            padding-top: 8px;
+            border-top: 1px solid #1a1a1a;
         }
     </style>
 </head>
@@ -118,19 +125,19 @@
 
         <h2 class="section-title">Projects</h2>
 
-        <div class="projects-list">
-
-            <article class="project-card">
+        <article class="project">
+            <div class="project-thumb">
                 <a href="https://hardwood-hoops.onrender.com" target="_blank" rel="noopener">
-                    <img src="logo.jpg" alt="Hardwood Hoops" class="project-image">
-                    <div class="project-info">
-                        <h3>Hardwood Hoops</h3>
-                        <p>Fantasy basketball league management site inspired by NBA.com</p>
-                    </div>
+                    <img src="logo.jpg" alt="Hardwood Hoops">
                 </a>
-            </article>
+            </div>
+            <div class="project-content">
+                <h3><a href="https://hardwood-hoops.onrender.com" target="_blank" rel="noopener">Hardwood Hoops</a></h3>
+                <p>A comprehensive platform for league members to view statistics, team information, player data, contracts, draft picks, and other league analytics. Built to bring the NBA.com experience to a simulation league based on the ProBoards community.</p>
+                <div class="project-status">Last updated league information: December 31, 2025 (with exception of transactions where one was used as a test sample)</div>
+            </div>
+        </article>
 
-        </div>
     </main>
 
 </body>
